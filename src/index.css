@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --navy-blue: #0F2942;
+    --navy-blue-light: #1A3A52;
+    --accent-blue: #3B82F6;
+    --light-grey: #F8FAFC;
+    --medium-grey: #E2E8F0;
+    --dark-grey: #1E293B;
+    --text-primary: #0F172A;
+    --text-secondary: #475569;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    @apply bg-white text-slate-900 antialiased;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    line-height: 1.7;
+    letter-spacing: -0.011em;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold tracking-tight text-slate-900;
+    line-height: 1.1;
+  }
+
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl;
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl;
+  }
+
+  h3 {
+    @apply text-xl md:text-2xl;
+  }
+
+  p {
+    @apply text-slate-600 mb-4;
+  }
+}
+
+@layer utilities {
+  .text-navy-blue {
+    color: var(--navy-blue);
+  }
+  
+  .text-navy-blue-light {
+    color: var(--navy-blue-light);
+  }
+
+  .bg-navy-blue {
+    background-color: var(--navy-blue);
+  }
+  
+  .bg-navy-blue-light {
+    background-color: var(--navy-blue-light);
+  }
+
+  .border-navy-blue {
+    border-color: var(--navy-blue);
+  }
+
+  .hover\:bg-blue-900:hover {
+    background-color: #0B1E32;
+  }
+  
+  .shadow-soft {
+    box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
+  }
+  
+  .glass-card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+  }
+}
